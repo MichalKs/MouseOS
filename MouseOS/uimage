@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# This is a script for updating floppy.img with the kernel you compiled
+# It uses the sudo command, so you have to create an entry in the sudoers file
+# with NOPASSWD set (this isn't a very good solution, but what the heck...)
+
+echo "Updating floppy image"
+sudo /sbin/losetup /dev/loop0 floppy.img
+sudo mount /dev/loop0 /media/floppy1
+sudo cp Release/kernel /media/floppy1/kernel
+# wait some time for
+sleep 1
+sudo umount /dev/loop0
+sudo /sbin/losetup -d /dev/loop0
+echo "Finished updating floppy image"
