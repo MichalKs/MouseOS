@@ -81,6 +81,8 @@ int main () {
 
 	keyboard_init();
 
+
+
 	// dump BIOS data area
 	memset((char*)0x150000,256,0xff);
 	hexdump((char*)0x400,256);
