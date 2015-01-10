@@ -82,8 +82,8 @@ int main () {
 	keyboard_init();
 
 	// dump BIOS data area
-	//memset((char*)0x150000,256,0xff);
-//	hexdump((char*)0x400,256);
+	memset((char*)0x150000,256,0xff);
+	hexdump((char*)0x400,256);
 	//int* wsk=&temp;
 	//puthex((int)wsk);
 	//enable interrupts
