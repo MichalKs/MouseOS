@@ -7,7 +7,7 @@
 echo "Updating floppy image"
 sudo /sbin/losetup /dev/loop0 floppy.img
 sudo mount /dev/loop0 /media/floppy1
-sudo cp Release/kernel /media/floppy1/kernel
+sudo cp Release/MouseOS /media/floppy1/MouseOS
 # wait some time for
 sleep 1
 sudo umount /dev/loop0

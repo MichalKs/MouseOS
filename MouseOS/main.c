@@ -83,7 +83,7 @@ int main () {
 
 	// dump BIOS data area
 	//memset((char*)0x150000,256,0xff);
-	hexdump((char*)0x400,256);
+//	hexdump((char*)0x400,256);
 	//int* wsk=&temp;
 	//puthex((int)wsk);
 	//enable interrupts
@@ -96,8 +96,8 @@ int main () {
 	temp=pit_counter_latch(0);
 	println(itoa(temp));
 
-	pci_discover();
-	println(itoa16(0xffab));
+//	pci_discover();
+//	println(itoa16(0xffab));
 	__asm__("sti");
 	for (;;) {
 		//putc('*');
